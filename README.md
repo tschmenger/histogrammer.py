@@ -27,5 +27,5 @@ Running "/.histogrammer.py -f EGFR_COSMIC_Example.txt -c 6 -b 32" will produce:
 
 
 
-This will tell us that a) the majority of somatic EGFR mutations do have a low frequency and b) that some residues are exceptionally often mutated.
+This will tell us that **a)** the majority of somatic EGFR mutations do have a low frequency and **b)** that some residues are exceptionally often mutated.
 This fits to the visual inspection over at https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=EGFR

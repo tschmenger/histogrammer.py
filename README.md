@@ -23,7 +23,7 @@ The histogram is then plotted using = for each 0.005 of the normalized value.
 
 Running "/.histogrammer.py -f EGFR_COSMIC_Example.txt -c 6 -b 32" will produce:
 
-[Example_Output](histogrammer.py/Example_Result.png)
+[Example_Output](Example_Result.png)
 
 
 

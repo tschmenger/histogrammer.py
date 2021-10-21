@@ -31,10 +31,10 @@ This will tell us that **a)** the majority of somatic EGFR mutations do have a l
 This fits to the visual inspection over at https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=EGFR
 
 
-# Add histogrammer to your path
+# Add histogrammer to your .bashrc
 Create a folder **.histogrammer** in your home directory and copy **histogrammer.py** into this folder. Rename the script into **histogrammer** or another name of your choice.
 Locate and open the file **.bashrc** and add the following line to the end of the script:
-
-- export PATH=$PATH:~/.histogrammer
-
+```
+export PATH=$PATH:~/.histogrammer
+```
 You can then call the script from anywhere on your system by typing **histogrammer**.

@@ -46,18 +46,24 @@ You can then call the script from anywhere on your system by typing **histogramm
 
 
 # copy&paste
-```mermaid
-    A[Amino Acid Properties]--> X[Static Sources]
-    B[Mechismo2B Predictions] --> X[Static Sources]
-    G[gnomAD] --> X[Static Sources]
-    H[SIFT] --> X[Static Sources]
-    I[Polyphen2] --> X[Static Sources]
-    J[PMUT] --> X[Static Sources]
-    F[ClinVar] --> D[Dynamic Sources]
-    E[Humsavar] --> D[Dynamic Sources]
-    K[UniProt] --> D[Dynamic Sources]
-    L[PFAM] --> D[Dynamic Sources]
-    M[Phosphosite] --> D[Dynamic Sources]
-    D --> Z[Annotations]
-    X --> Z[Annotations]
-```
+graph LR
+    subgraph Static Sources
+    A[Amino Acid Properties]--> X(Static Sources)
+    B[Mechismo2B Predictions] --> X(Static Sources)
+    G[gnomAD] --> X(Static Sources)
+    H[SIFT] --> X(Static Sources)
+    I[Polyphen2] --> X(Static Sources)
+    J[PMUT] --> X(Static Sources)
+    end
+    subgraph Dynamic sources
+    F[ClinVar] --> D(Dynamic Sources)
+    E[Humsavar] --> D(Dynamic Sources)
+    K[UniProt] --> D(Dynamic Sources)
+    L[PFAM] --> D(Dynamic Sources)
+    M[Phosphosite] --> D(Dynamic Sources)
+    end
+    subgraph Annotations
+    X ==> Z[(Annotations)]
+    end
+    D ==> Z[(Annotations)]
+

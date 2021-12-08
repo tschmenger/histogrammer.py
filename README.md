@@ -46,6 +46,7 @@ You can then call the script from anywhere on your system by typing **histogramm
 
 
 # test
+```mermaid
 graph TD
     A[alignments] --> B[data]
     A --> C[scripts]
@@ -58,3 +59,4 @@ graph TD
     I --> |fasta files - one per homologous group <br><br> Gene to HG mapping found in data_tables folder| J[HGXXXXXXX.fa.gz]
     D --> K{{data_tables}}
     K --> L[HUMAN_homologous_groups.tsv]
+```

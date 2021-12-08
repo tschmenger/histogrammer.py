@@ -42,7 +42,10 @@ You can then call the script from anywhere on your system by typing **histogramm
 
 
 
-----> WIP
+
+
+
+# test
 graph TD
     A[alignments] --> B[data]
     A --> C[scripts]

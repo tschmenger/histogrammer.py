@@ -38,3 +38,20 @@ Locate and open the file **.bashrc** and add the following line to the end of th
 export PATH=$PATH:~/.histogrammer
 ```
 You can then call the script from anywhere on your system by typing **histogrammer**.
+
+
+
+
+----> WIP
+graph TD
+    A[alignments] --> B[data]
+    A --> C[scripts]
+    B --> D{HUMAN}
+    B --> |Common to all organisms| E[/homologous_groups\]
+    D --> F(orthologs_only)
+    F --> |regex for subfolders = ^.... <br> i.e. first 4 characters of Uniprot Accession| G[XXXX]
+    G --> |fasta files - one per gene containing orthologs| H[uniprotAccession.fa.gz]
+    E --> |regex for subfolders = ^HG.... <br> i.e. HG + first 4 digits of homologous group number| I[/HGXXXX\]
+    I --> |fasta files - one per homologous group <br><br> Gene to HG mapping found in data_tables folder| J[HGXXXXXXX.fa.gz]
+    D --> K{{data_tables}}
+    K --> L[HUMAN_homologous_groups.tsv]

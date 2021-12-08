@@ -46,6 +46,7 @@ You can then call the script from anywhere on your system by typing **histogramm
 
 
 # copy&paste
+```
 graph LR
     subgraph Static Sources
     A[Amino Acid Properties]--> X(Static Sources)
@@ -66,4 +67,4 @@ graph LR
     X ==> Z[(Annotations)]
     end
     D ==> Z[(Annotations)]
-
+```

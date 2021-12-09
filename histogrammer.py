@@ -1,6 +1,6 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-
+# AUTHOR: Torsten Schmenger
 import sys
 import re
 #import logging ### use this in a try: exception: setup, write: logging.exception("message") under except:

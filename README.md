@@ -1,5 +1,8 @@
+# Preface
+This repository was simply made to get used to github. Due to the simplicity of the script shown here, it can mostly be ignored. Cheers.
+
 # histogrammer.py
-This script will take a numeric column of a given file and plot a histogram in the command line.
+This **Python 2.7** script will take a numeric column of a given file and plot a histogram in the command line.
 The purpose of doing so is solely to get an overview of the inspected data, and how this data is distributed.
 Equal sized Groups will be formed according to the highest value of the given column divided by the number of bins.
 After assigning counts into each group the script will normalize the values from 0 to 1.
@@ -21,7 +24,7 @@ The histogram is then plotted using = for each 0.005 of the normalized value.
 
 # Example
 
-Running "/.histogrammer.py -f EGFR_COSMIC_Example.txt -c 6 -b 32" will produce:
+Running ```/.histogrammer.py -f EGFR_COSMIC_Example.txt -c 6 -b 32``` will produce:
 
 ![Example_Output](Example_Result.png)
 
@@ -37,34 +40,7 @@ Locate and open the file **.bashrc** and add the following line to the end of th
 ```
 export PATH=$PATH:~/.histogrammer
 ```
-You can then call the script from anywhere on your system by typing **histogrammer**.
+You can then call the script from anywhere on your system by typing **histogrammer**. More information on that can be found ![here](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/).
 
-
-
-
-
-
-
-# copy&paste
-```
-graph LR
-    subgraph Static Sources
-    A[Amino Acid Properties]--> X(Static Sources)
-    B[Mechismo2B Predictions] --> X(Static Sources)
-    G[gnomAD] --> X(Static Sources)
-    H[SIFT] --> X(Static Sources)
-    I[Polyphen2] --> X(Static Sources)
-    J[PMUT] --> X(Static Sources)
-    end
-    subgraph Dynamic sources
-    F[ClinVar] --> D(Dynamic Sources)
-    E[Humsavar] --> D(Dynamic Sources)
-    K[UniProt] --> D(Dynamic Sources)
-    L[PFAM] --> D(Dynamic Sources)
-    M[Phosphosite] --> D(Dynamic Sources)
-    end
-    subgraph Annotations
-    X ==> Z[(Annotations)]
-    end
-    D ==> Z[(Annotations)]
-```
+# Future Plans
+Currently the script does not handle single bins with > 90% very well. A future release will check for this and shrink down the resulting bar size, being more acceptable for most screen widths.

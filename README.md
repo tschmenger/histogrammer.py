@@ -1,6 +1,10 @@
 # Preface
 This repository was simply made to get used to github. Due to the simplicity of the script shown here, it can mostly be ignored. Cheers.
 
+## Requirements
+![Python2.7](https://www.python.org/download/releases/2.7/)
+![Python2 Statistics](https://pypi.org/project/statistics/)
+
 ## histogrammer.py
 This **Python 2.7** script will take a numeric column of a given file and plot a histogram in the command line.
 The purpose of doing so is solely to get an overview of the inspected data, and how this data is distributed.
@@ -44,4 +48,4 @@ export PATH=$PATH:~/.histogrammer
 You can then call the script from anywhere on your system by typing **histogrammer**. More information on that can be found ![here](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/).
 
 ## Future Releases
-There are no further updates planned.
+A future release is meant to remove the *statistics* requirement, enabling the script to run on most systems supporting Python2.7. Upgrading the code to Python3 is planned, too.

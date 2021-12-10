@@ -1,14 +1,14 @@
 # Preface
 This repository was simply made to get used to github. Due to the simplicity of the script shown here, it can mostly be ignored. Cheers.
 
-# histogrammer.py
+## histogrammer.py
 This **Python 2.7** script will take a numeric column of a given file and plot a histogram in the command line.
 The purpose of doing so is solely to get an overview of the inspected data, and how this data is distributed.
 Equal sized Groups will be formed according to the highest value of the given column divided by the number of bins.
 After assigning counts into each group the script will normalize the values from 0 to 1.
-The histogram is then plotted using = for each 0.005 of the normalized value.
+The histogram is then plotted using = for each 0.005 of the normalized value. If one bin holds more than 90 % of the data, all bars are shrinked by 50 %.
 
-# How to use:
+## How to use:
 
 ./histogrammer.py -c NUM -f FILEPATH [OPTIONS] -h -g SYMBOL -s SEPARATOR -b SIZE -k VALUE
 
@@ -22,7 +22,8 @@ The histogram is then plotted using = for each 0.005 of the normalized value.
 
 
 
-# Example
+## Example
+We can use a short dataset of somatic EGFR mutations.
 
 Running ```./histogrammer.py -f EGFR_COSMIC_Example.txt -c 6 -b 32``` will produce:
 
@@ -30,14 +31,17 @@ Running ```./histogrammer.py -f EGFR_COSMIC_Example.txt -c 6 -b 32``` will produ
 
 
 
-This will tell us that **a)** the majority of somatic EGFR mutations do have a low frequency and **b)** that some residues are exceptionally often mutated.
+This will tell us that **a)** the majority of somatic EGFR mutations do have a low frequency as > 90 % of all EGFR variants are only mutated between 1 - 2.9 times (the first bin) and **b)** that some residues are exceptionally often mutated, namely > 62 times.
 This fits to the visual inspection over at https://cancer.sanger.ac.uk/cosmic/gene/analysis?ln=EGFR
 
 
-# Add histogrammer to your .bashrc
+## Add histogrammer to your .bashrc
 Create a folder **.histogrammer** in your home directory and copy **histogrammer.py** into this folder. Rename the script into **histogrammer** or another name of your choice.
 Locate and open the file **.bashrc** and add the following line to the end of the script:
 ```
 export PATH=$PATH:~/.histogrammer
 ```
 You can then call the script from anywhere on your system by typing **histogrammer**. More information on that can be found ![here](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/).
+
+## Future Releases
+There are no further updates planned.

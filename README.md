@@ -2,7 +2,7 @@
 This repository was simply made to get used to github. Due to the simplicity of the script shown here, it can mostly be ignored. Cheers.
 
 ## Requirements
-![Python2.7](https://www.python.org/download/releases/2.7/)
+![Python2.7](https://www.python.org/download/releases/2.7/)  
 ![Python2 Statistics](https://pypi.org/project/statistics/)
 
 ## histogrammer.py

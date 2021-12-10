@@ -10,7 +10,7 @@ The histogram is then plotted using = for each 0.005 of the normalized value.
 
 # How to use:
 
-/.histogrammer.py -c NUM -f FILEPATH [OPTIONS] -h -g SYMBOL -s SEPARATOR -b SIZE -k VALUE
+./histogrammer.py -c NUM -f FILEPATH [OPTIONS] -h -g SYMBOL -s SEPARATOR -b SIZE -k VALUE
 
  	-c	NUM defines the target column
 	-f	FILEPATH determines the target file
@@ -41,6 +41,3 @@ Locate and open the file **.bashrc** and add the following line to the end of th
 export PATH=$PATH:~/.histogrammer
 ```
 You can then call the script from anywhere on your system by typing **histogrammer**. More information on that can be found ![here](https://linuxize.com/post/how-to-add-directory-to-path-in-linux/).
-
-# Future Plans
-Currently the script does not handle single bins with > 90% very well. A future release will check for this and shrink down the resulting bar size, being more acceptable for most screen widths.
